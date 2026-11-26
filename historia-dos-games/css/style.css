@@ -1,0 +1,46 @@
+/* Cada era tem sua cor de destaque */
+:root { --fundo:#14121f; --painel:#010003; --texto:#ece8f5; --suave:#a9a3bd; --destaque:#000000; }
+body.ps1 { --destaque:#c9c9d6; }
+body.ps2 { --destaque:#000000; }
+body.ps3 { --destaque:#ffffff; }
+body.ps4 { --destaque:#000000; }
+body.atual { --destaque:#ffffff; }
+
+* { box-sizing: border-box; }
+body { margin:0; font-family:"Segoe UI", Arial, sans-serif; line-height:1.6; background:var(--fundo); color:var(--texto); }
+
+header { background:var(--painel); padding:24px 20px 16px; text-align:center; border-bottom:4px solid var(--destaque); }
+header h1 { margin:0 0 12px; font-size:2rem; letter-spacing:1px; }
+
+nav ul { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; justify-content:center; gap:8px 20px; }
+nav a { color:var(--texto); text-decoration:none; font-weight:bold; padding:4px 2px; border-bottom:2px solid transparent; }
+nav a:hover, nav a.ativo { border-bottom-color:var(--destaque); }
+
+.busca { max-width:420px; margin:16px auto 0; position:relative; text-align:left; }
+.busca input { width:100%; padding:10px 14px; border:2px solid var(--suave); border-radius:6px; background:var(--fundo); color:var(--texto); font-size:1rem; }
+.busca input:focus { outline:none; border-color:var(--destaque); }
+#resultados { list-style:none; margin:6px 0 0; padding:0; }
+#resultados li a { display:block; padding:8px 12px; margin-top:4px; background:var(--fundo); color:var(--texto); text-decoration:none; border-left:4px solid var(--destaque); }
+#resultados li a:hover { background:#2d2646; }
+#resultados small { display:block; color:var(--suave); }
+
+main { max-width:900px; margin:30px auto; padding:0 20px; }
+h2 { font-size:1.7rem; border-bottom:2px solid var(--destaque); padding-bottom:6px; }
+
+.eras { list-style:none; padding:0; display:grid; gap:12px; }
+.eras a { display:block; padding:14px 16px; background:var(--painel); color:var(--texto); text-decoration:none; border-left:6px solid var(--destaque); }
+.eras a:hover { background:#2d2646; }
+.eras span { display:block; color:var(--suave); font-size:.9rem; }
+
+.console { background:var(--painel); border-left:6px solid var(--destaque); padding:16px 20px; margin:24px 0; }
+.console h3 { margin-top:0; font-size:1.4rem; }
+.console h3 span { color:var(--suave); font-weight:normal; }
+.foto { border:2px dashed var(--suave); color:var(--suave); padding:36px 16px; text-align:center; margin-bottom:12px; }
+.foto img { max-width:100%; }
+.pessoal { color:var(--suave); font-style:italic; }
+
+footer { text-align:center; padding:20px; background:var(--painel); color:var(--suave); }
+
+:focus-visible { outline:3px solid var(--destaque); outline-offset:2px; }
+
+@media (max-width:600px) { header h1 { font-size:1.5rem; } main { margin:20px auto; } }

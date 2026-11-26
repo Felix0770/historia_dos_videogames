@@ -1,0 +1,2 @@
+Coloque aqui as fotos dos consoles (ps1.jpg, ps2.jpg...).
+Depois, troque o <div class="foto"> de cada console por <img src="img/ps1.jpg" alt="descricao">.
